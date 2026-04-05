@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  
+  --color-prestige-navy: #1a2b48;
+  --color-prestige-gold: #c5a059;
+  --color-prestige-paper: #f5f2ed;
+  --color-prestige-ink: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-prestige-paper text-prestige-ink;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #c5a059 0%, #e8d1a2 50%, #c5a059 100%);
+}
+
+.prestige-shadow {
+  box-shadow: 0 10px 30px -10px rgba(26, 43, 72, 0.1);
+}
